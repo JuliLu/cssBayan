@@ -3,3 +3,84 @@
     margin: 0;
     box-sizing: border-box;
   }
+  html {
+    font-size: 8px;
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+    color: #000;
+  }
+  
+  .container {
+    max-width: 55vw;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-top: 2rem;
+  }
+  
+  .mem-input {
+    appearance: none;
+  }
+  
+  .mem-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-top: 0.1rem solid #aeb5bd;
+    padding: 1rem;
+
+  }
+  .mem-title:hover{
+    color: blue;
+  }
+  
+  .mem-input:checked ~ .mem-title > p {
+    color: #000;
+  }
+  
+  .arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1rem 0.5rem 0 0.5rem;
+    border-color: #000 transparent transparent transparent;
+    transition: 1s;
+  }
+  
+  .mem-input:checked ~ .mem-title > .arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0.5rem 1rem 0.5rem;
+    border-color: transparent transparent #0a0a0a transparent;
+  }
+  
+  .mem-img {
+    width: 0%;
+    height: 0%;
+    display: block;
+    margin: auto;
+    transition: 1s;
+  }
+  
+  .mem-title-img {
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .mem-input:checked ~ .mem-title-img {
+    opacity: 1;
+  }
+  
+  .mem-item:hover > .mem-title-img > .mem-img,
+  .mem-input:checked ~ .mem-title-img > .mem-img {
+    width: 40%;
+    height: 40%;
+  }
